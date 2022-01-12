@@ -1,20 +1,25 @@
 init();
 
 function init() { //初期化のための関数
+   
     bird = document.getElementById("bird");
     maxY = window.innerHeight - bird.height;
     ay = 0.4;
     vy = 0;
     y = 0;
+    cnt = 0;
     bgX = 0; //moveBackground関数のための初期化
     bird.style.top = y + "px";
     maxX = window.innerWidth; //画面の幅を保持する変数
-    document.getElemtntById("startBtn").style.display = "none"; //ボタンを非表示にする
+    
     document.addEventListener("click",fly);
     start();
   }
 
+  
+
   function start(){ //ゲーム全体の処理
+    score();
     moveBirdInterval = setInterval(moveBird, 20);
     genEnemyInterval = setInterval(genEnemy, 2000); //initをstartで2秒ごとに呼び出すように指定
     moveEnemyInterval = setInterval(moveEnemy, 20); //壁の関数を呼び出す
@@ -22,7 +27,6 @@ function init() { //初期化のための関数
 }
 
   function end(){ //ゲーム全体の処理
-    document.getElemtntById("startBtn").style.display = "block"; //ボタンを表示する
     clearInterval(moveBirdInterval);
     clearInterval(genEnemyInterval);  //ストップさせる指定
     clearInterval(moveEnemyInterval); //壁の関数を止める
@@ -42,19 +46,19 @@ function init() { //初期化のための関数
   }
 
   function fly() { //飛び上がるための関数
-      vy = -10; //ジャンプの高さの調整
+      vy = -6; //ジャンプの高さの調整
   }
 
   function genEnemy() { //壁を生成する関数
-    var pos = 20 + Math.random() * 60;  //壁の隙間がランダムに変わるように
+    var pos = 100+ Math.random() * 30;  //壁の隙間がランダムに変わるように
     var enemyTop = document.createElement("div");
     var enemyBottom = document.createElement("div");
     enemyTop.className = "enemy";
     enemyBottom.className = "enemy";
-    enemyTop.style.bottom = pos + 10 + "%";
-    enemyBottom.style.top = (100 - pos) + 10 + "%";
+    enemyTop.style.bottom = pos  + 10 + "%";
+    enemyBottom.style.top = (100 - pos*1.8) + 10 + "%";
     enemyTop.style.left = maxX + "px";
-    enemyBottom.style.left = maxX + "px";
+    enemyBottom.style.left = maxY + "px";
     document.body.insertBefore(enemyTop, document.body.firstChild);
     document.body.insertBefore(enemyBottom, document.body.firstChild);
   }
@@ -73,7 +77,7 @@ function init() { //初期化のための関数
   }
 
   function moveBackground(){ //背景を動かす関数
-    bgX -= 10;
+    bgX -= 7;
     document.body.style.backgroundPosition = bgX + "px";
   }
 
@@ -88,4 +92,11 @@ function init() { //初期化のための関数
         }
       }
     }
+  }
+
+  function score() {
+    cnt++;
+    var score = cnt;
+    document.getElementById("score").innerHTML = score;
+
   }
