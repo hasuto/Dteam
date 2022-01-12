@@ -1,0 +1,28 @@
+body {
+    background-image: url("back.jpg");
+  }
+
+  #bird {
+    height: 5%;
+    position: absolute;
+    left: 10%;
+  }
+
+  .enemy {
+    background-image: url("dokan.png");
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  #startBtn {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
