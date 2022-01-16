@@ -13,7 +13,7 @@ function init() { //初期化のための関数
     maxX = window.innerWidth; //画面の幅を保持する変数
     document.getElementById("back").style.display = "none";
     document.addEventListener("click",fly);
-    a = true;
+    judgement = true;
     start();
   }
 
@@ -92,15 +92,15 @@ function init() { //初期化のための関数
       var enemyRect = enemies[i].getBoundingClientRect();
       if (enemyRect.left < birdRect.right && birdRect.left < enemyRect.right) { //横方向の重なり
         if (enemyRect.top < birdRect.bottom && birdRect.top < enemyRect.bottom) { //縦方向の重なり
-            a = false;
+          judgement = false;
           end();
         }
       }
     }
   }
 
-  function score() {
-      if (a == false){
+  function score() { //scoreカウント用の関数
+      if (judgement == false){
         end();
       }
       cnt++;
