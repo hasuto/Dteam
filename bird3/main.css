@@ -1,0 +1,28 @@
+body {
+    background-image: url("back.jpg");
+  }
+
+  #bird {
+    height: 5%;
+    position: absolute;
+    left: 10%;
+  }
+
+  .enemy {
+    background-image: url("brok.jpg");
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    top: 60%;
+    left: -10%;
+  }
+
+  #startBtn {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    right: 0;
+    bottom: 0;
+    margin-left: 20px;
+  }
