@@ -26,3 +26,8 @@ body {
     bottom: 0;
     margin-left: 20px;
   }
+
+  
+  p ,#score {
+    font-size: 30px;
+  }
