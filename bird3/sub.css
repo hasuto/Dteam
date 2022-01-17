@@ -26,7 +26,7 @@ EDIT ON
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 100%;
+  font-size: 140%;
 }
 
 .btn,
@@ -71,7 +71,7 @@ a.btn--yellow:hover {
 
 a {
     position: absolute;
-    right: 150px;
+    left: 46%;
     top: 300px; 
     
 
