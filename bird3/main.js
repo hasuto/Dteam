@@ -1,5 +1,13 @@
 init();
 
+var music = Audio();
+
+document.body.onclick = play();
+
+function play() {
+   music.play();
+}
+
 function init() { //初期化のための関数
    
     bird = document.getElementById("bird");
@@ -51,6 +59,12 @@ function init() { //初期化のための関数
 
   function fly() { //飛び上がるための関数
       vy = -15; //ジャンプの高さの調整
+      window.onload = () => {
+        const se = document.querySelector('#demo_sound');
+        document.querySelector("#demo_btn").addEventListener("click", () => {
+          se.play();
+        })
+      }
   }
 
   function genEnemy() { //壁を生成する関数
