@@ -4,7 +4,7 @@ function init() { //初期化のための関数
    
     bird = document.getElementById("bird");
     maxY = window.innerHeight - bird.height;
-    ay = 0.4;
+    ay = 0.5;
     vy = 0;
     y = 0;
     cnt = 0;
@@ -50,7 +50,7 @@ function init() { //初期化のための関数
   }
 
   function fly() { //飛び上がるための関数
-      vy = -18; //ジャンプの高さの調整
+      vy = -15; //ジャンプの高さの調整
   }
 
   function genEnemy() { //壁を生成する関数
@@ -60,7 +60,7 @@ function init() { //初期化のための関数
     enemyTop.className = "enemy";
     enemyBottom.className = "enemy";
     enemyTop.style.bottom = pos  + 10 + "%";
-    enemyBottom.style.top = (100 - pos*1.8) + 10 + "%";
+    enemyBottom.style.top = (100 - pos*1.7) + 10 + "%";
     enemyTop.style.left = maxX + "px";
     enemyBottom.style.left = maxY + "px";
     document.body.insertBefore(enemyTop, document.body.firstChild);
