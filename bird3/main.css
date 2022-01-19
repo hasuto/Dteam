@@ -1,17 +1,17 @@
 body {
-    background-image: url("back.jpg");
+    background-image: url("back2.jpg");
   }
 
   #bird {
-    height: 4%;
+    height: 9%;
     position: absolute;
-    left: 9%;
+    left: 20%;
   }
 
   .enemy {
-    background-image: url("brok.jpg");
+    background-image: url("kabe.jpg");
     width:10%;
-    height:110%;
+    height:100%;
     position: absolute;
     top: 55%;
     /* top: var(--random_50_150)px; */
@@ -30,7 +30,8 @@ body {
 
   p, #score  {
     font-size: 30px;
-  }
+    color: azure;
+   }
 
   #back {
     margin-top: 100px;
