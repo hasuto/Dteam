@@ -1,12 +1,33 @@
 init();
 
-var music = Audio();
 
-document.body.onclick = play();
+var audioElem;
 
-function play() {
-   music.play();
+document.body.onclick = playSound();
+
+function playSound(){ //bgm用関数
+  audioElem = new Audio();
+  audioElem.src = "bgm.mp3";
+  audioElem.play();
+  audioElem.loop = true;
 }
+function StopSound(){
+  audioElem.pause();
+}
+
+
+const music = new Audio('jump.mp3');
+const play = document.getElementById('play');
+play.addEventListener('click', function(){
+  if(!music.paused){
+    music.pause();
+  }else{
+    music.play();
+  }
+});
+
+
+
 
 function init() { //初期化のための関数
    

@@ -28,7 +28,7 @@ body {
     margin-left: 20px;
   }
 
-  p ,#score {
+  p, #score  {
     font-size: 30px;
   }
 
@@ -41,3 +41,10 @@ body {
   #demo_btn {
     padding: 1000px;
   }
+
+  #play {
+    font-size: 140%;
+    
+  }
+
+ 
