@@ -104,5 +104,7 @@ a {
 	margin-left: 20px;
 }
 
-
+body {
+  background-image: url("back.png");
+}
   
